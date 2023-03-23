@@ -46,6 +46,8 @@ font-family: 'Raleway', sans-serif;
   font-size: 1.2em;
   font-family: 'Raleway', sans-serif;
 }
+h2{
+color:black;}
 
 @media only screen and (max-width: 1000px) {
   body {
@@ -86,7 +88,10 @@ ul {
 li {
     float: left;
 }
+a{
+text-decoration: none;
 
+}
 li a {
     display: block;
     color: white;
