@@ -53,9 +53,7 @@ color:black;}
   body {
     flex-basis: 100%;
   }
-  h1{
-font-size : 20px;
-}
+
 }
 #texte1{
 grid-row-start: 3;
