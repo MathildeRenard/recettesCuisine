@@ -1,0 +1,41 @@
+body{
+text-align:center;
+ display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+#textePrincipal{
+grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+li {
+    float: left;
+}
+a{
+text-decoration: none;
+
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
