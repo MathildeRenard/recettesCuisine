@@ -6,6 +6,323 @@ grid-column-start: 3;
 color : black;
 font-family: 'Raleway', sans-serif;
 }
+.a_wrap{
+  position: relative;
+  overflow: hidden;
+  height:100vh;
+  width: 100vw;
+}
+
+.a1{
+  width: 1000px;
+  height: 100vh;
+  background: pink;
+  position: absolute;
+  clip-path: polygon(25% 0%, 63% 0, 38% 100%, 0 100%);
+  border: solid red px;
+  top: 0px;
+  animation:run 2s infinite;
+   animation-delay: .4s;
+}
+
+.a2{
+  width: 1000px;
+  height: 100vh;
+  background: red;
+  position: absolute;
+  clip-path: polygon(25% 0%, 63% 0, 38% 100%, 0 100%);
+  border: solid red px;
+  top: 0px;
+    animation:run 2s infinite;
+  animation-delay: .8s;
+}
+
+.a3{
+  width: 1000px;
+  height: 100vh;
+  background: yellow;
+  position: absolute;
+  clip-path: polygon(25% 0%, 63% 0, 38% 100%, 0 100%);
+  border: solid red px;
+  top: 0px;
+  animation:run 2s infinite;
+}
+
+@keyframes run{
+  0%{
+    left:-50%;
+  }
+  100%{
+    left:100%;
+  }
+}
+
+/******************************************/
+.panwrap{
+  top:40vh;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  /*animation:opening 3s infinite;*/
+  overflow:hidden;
+
+}
+
+
+@keyframes opening{
+  0%{
+opacity:1;
+  }
+  90%{
+    opacity:.8;
+}
+  100%{
+opacity:0;
+  }
+
+}
+
+/***********************************/
+.pan{
+position: absolute;
+  top:35%;
+  left:25%;
+  width: 100px;
+  height: 30px;
+  border-radius: 50%;
+  border-bottom: solid 30px gray;
+  animation-timing-function: ease;
+  animation: cook .4s infinite alternate;
+  z-index:9999;
+}
+
+@keyframes cook{
+  0%{
+     transform:rotate(0.03turn);
+  }
+  100%{
+     transform:rotate(-0.03turn);
+  }
+}
+
+.pan:before{
+  content:'';
+  position: absolute;
+  width: 66px;
+  height: 11px;
+  right: 17px;
+  top:40px;
+  opacity: .5;
+  border-radius: 50%;
+  border-bottom: solid 9px #A91717;
+
+}
+
+.pan:after{
+  content:'';
+  position: absolute;
+  width: 23px;
+  height: 6px;
+  border-radius: 20%;
+  background: black;
+  right: -17px;
+  top:30px;
+  border:black 1px solid;
+
+}
+
+.ball{
+  border-radius: 50%;
+  position: absolute;
+  left:60px;
+  width: 20px;
+  height: 20px;
+  background: #ECD82D ;
+  animation: jump 1s infinite alternate;
+  animation-delay: .5s;
+  z-index:1;
+}
+
+.ball:after{
+  content:'';
+  border-left:solid 1px  #FFF;
+  border-right:solid 1px  #FFF;
+  position:absolute;
+  left: 10px;
+  width: 3px;
+  height:19px;
+  z-index: 1;
+}
+
+@keyframes jump{
+  0%{
+    top: 50%;
+    transform:rotate(0deg);
+  }
+    50%{
+    top: 10%;
+      transform:rotate(360deg);
+  }
+  100%{
+    top: 50%;
+    transform:rotate(0deg);
+  }
+}
+.carrot{
+
+  width: 28px;
+  height: 28px;
+  left:110px;
+  position: relative;
+
+  animation: turn 1s infinite ;
+}
+
+@keyframes turn{
+ 0%{
+   transform:rotate(0turn);
+   top:20px;
+  }
+  50%{
+    transform:rotate(0.5turn);
+   top:90px;
+  }
+  100%{
+     transform:rotate(1turn);
+    top:20px;
+  }
+}
+
+.head{
+  position: absolute;
+  left:15px;
+  width: 23px;
+  height: 23px;
+  background: green;
+  transform:rotate(0.12turn);
+  clip-path: polygon(1% 48%, 7% 81%, 33% 66%, 45% 27%, 68% 30%, 50% 72%, 69% 48%, 91% 54%, 67% 81%);
+}
+.body{
+  position: absolute;
+  left:12px;
+  top:10px;
+ width: 18px;
+ height: 18px;
+ background: #E92D2D;
+ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+ transform:rotate(0.3turn);
+}
+
+.bacon{
+  animation: turn 1s infinite ;
+  position: absolute;
+  left:80px;
+  background: #CF4D4D;
+  width: 30px;
+  height: 30px;
+  animation-delay: .1s;
+  clip-path: polygon(34% 5%, 20% 8%, 15% 21%, 23% 38%, 20% 51%, 8% 59%, 13% 76%, 41% 83%, 43% 70%, 54% 61%, 58% 41%, 52% 24%, 52% 10%);
+}
+
+.baconli{
+  position:absolute;
+  left:7px;
+  top:2px;
+  width:4px;
+  height:50px;
+  border:1px solid #fff;
+}
+
+.green0{
+  position:absolute;
+  left:55px;
+  width:6px;
+  height:6px;
+  background: green;
+  animation: jump .8s infinite alternate;
+}
+
+.green1{
+  position:absolute;
+  left:67px;
+  width:6px;
+  height:6px;
+  background: green;
+  animation: jump .8s infinite alternate;
+  animation-delay: .1s;
+}
+
+.green2{
+  position:absolute;
+  left:77px;
+  width:6px;
+  height:6px;
+  background: green;
+  animation: jump 1s infinite alternate;
+  animation-delay: .2s;
+}
+
+.green3{
+  position:absolute;
+  left:87px;
+  width:6px;
+  height:6px;
+  background: green;
+  animation: turn 1s infinite alternate;
+  animation-delay: .1s;
+}
+
+.green4{
+  position:absolute;
+  left:110px;
+  width:6px;
+  height:6px;
+  background: green;
+  animation: jump 1s infinite alternate;
+}
+
+.green5{
+  position:absolute;
+  left:90px;
+  width:6px;
+  height:6px;
+  background: green;
+  animation: turn 1s infinite alternate;
+  animation-delay: .1s;
+}
+
+.dotwrap{
+  position: relative;
+  width:130px;
+  margin:auto;
+  height: 30px;
+  top: 110px;
+  left:6px;
+  overflow:hidden;
+}
+.dot1{
+  position: absolute;
+  border:solid 13px;
+  border-radius:50%;
+  top: 3px;
+  background: #000;
+  animation:run .5s infinite;
+}
+
+.dot2{
+  position: absolute;
+  border:solid 13px;
+  border-radius:50%;
+  top: 3px;
+  left: 50px;
+  background: #000;
+  animation:run .5s infinite;
+  animation-delay: .2s;
+}
+
+
+
 
 .card-title {
   margin-top: 0.5em;
